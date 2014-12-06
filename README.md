@@ -51,25 +51,25 @@ suppressPackageStartupMessages(library(dplyr))
 wbData %>%
     filter(year == 2012) %>%
     group_by(continent) %>%
-    summarise(urban.pop = median(urban.pop))
+    summarise(above65.pop = median(above65.pop, na.rm=TRUE))
 ```
 
 ```
 ## Source: local data frame [7 x 2]
 ## 
-##       continent urban.pop
-## 1        Africa   39.8755
-## 2          Asia   55.1575
-## 3        Europe   69.4520
-## 4 North America        NA
-## 5       Oceania   56.2180
-## 6 South America   76.6095
-## 7            NA        NA
+##       continent above65.pop
+## 1        Africa    3.151353
+## 2          Asia    5.024737
+## 3        Europe   16.328709
+## 4 North America    7.141654
+## 5       Oceania    5.149646
+## 6 South America    6.327061
+## 7            NA   16.313456
 ```
 
 ```r
 library(ggplot2)
-ggplot(subset(wbData, country == "Canada"), aes(x = year, y = urban.pop, color = country)) +
+ggplot(subset(wbData, country == "Canada"), aes(x = year, y = above65.pop, color = country)) +
 	geom_point(na.rm = TRUE) + geom_line()
 ```
 
