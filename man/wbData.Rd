@@ -6,9 +6,9 @@
 \title{World Bank data.}
 \format{A data frame with 11342 rows and 12 variables:
 \describe{
-  \item{country}{country name, factoer with 214 levels}
-  \item{country.code}{iso-2 code, character}
-  \item{isoAlpha3}{isoAlpha3 code, character}
+  \item{country}{country name, factor with 214 levels}
+  \item{country.code}{iso-2 code, factor with 213 levels}
+  \item{isoAlpha3}{isoAlpha3 code, factor with 212 levels}
   \item{continent}{continent name, factor with 6 levels}
   \item{year}{ranges from 1960 to 2012}
   \item{land.area}{land area, in square kilometers}

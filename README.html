@@ -59,10 +59,11 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <h3>Description</h3>
 <ul>
 <li>Source: <a href="http://data.worldbank.org/">World Bank Data</a></li>
-<li>12 variables</li>
+<li>11342 observations of 12 variables:
+<ul>
 <li><code>country</code>: country name, factoer with 214 levels</li>
-<li><code>country.code</code>: iso-2 code for each country, character</li>
-<li><code>isoAlpha</code>: isoAlpha3 code for each country, character</li>
+<li><code>country.code</code>: iso-2 code for each country, factor with 213 levels</li>
+<li><code>isoAlpha</code>: isoAlpha3 code for each country, factor with 212 levels</li>
 <li><code>continent</code>: continent name, factor with 6 levels</li>
 <li><code>year</code>: ranges from 1960 to 2012</li>
 <li><code>land.area</code>: land area, in square kilometers</li>
@@ -72,6 +73,8 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li><code>urban.pop</code>: percentage of urban population of total population</li>
 <li><code>above65.pop</code>: percentage of population aged 65 or above of total population</li>
 <li><code>gdp.per.capita</code>: GDP per capita in US dollars</li>
+</ul></li>
+<li>This dataset contains missing values in various fields</li>
 </ul>
 </div>
 <div id="install-and-test-drive" class="section level3">
@@ -102,7 +105,7 @@ wbData %&gt;%
 ## 4 North America        NA
 ## 5       Oceania   56.2180
 ## 6 South America   76.6095
-## 7            NA   31.1890</code></pre>
+## 7            NA        NA</code></pre>
 <pre class="r"><code>library(ggplot2)
 ggplot(subset(wbData, country == &quot;Canada&quot;), aes(x = year, y = urban.pop, color = country)) +
     geom_point(na.rm = TRUE) + geom_line()</code></pre>

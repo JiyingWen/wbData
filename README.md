@@ -4,19 +4,20 @@ Excerpt of the World Bank indicator data on life expectancy, GDP per capita, pop
 
 ### Description
 * Source: [World Bank Data](http://data.worldbank.org/)
-* 12 variables
-- `country`: country name, factoer with 214 levels
-- `country.code`: iso-2 code for each country, character
-- `isoAlpha`: isoAlpha3 code for each country, character
-- `continent`: continent name, factor with 6 levels
-- `year`: ranges from 1960 to 2012
-- `land.area`: land area, in square kilometers
-- `life.exp`: life expectancy at birth, in years
-- `fertility.rate`: the number of children that would be born to a woman
-- `population`: total population
-- `urban.pop`: percentage of urban population of total population
-- `above65.pop`: percentage of population aged 65 or above of total population
-- `gdp.per.capita`: GDP per capita in US dollars
+* 11342 observations of 12 variables:
+	- `country`: country name, factoer with 214 levels
+	- `country.code`: iso-2 code for each country, factor with 213 levels
+	- `isoAlpha`: isoAlpha3 code for each country, factor with 212 levels
+	- `continent`: continent name, factor with 6 levels
+	- `year`: ranges from 1960 to 2012
+	- `land.area`: land area, in square kilometers
+	- `life.exp`: life expectancy at birth, in years
+	- `fertility.rate`: the number of children that would be born to a woman
+	- `population`: total population
+	- `urban.pop`: percentage of urban population of total population
+	- `above65.pop`: percentage of population aged 65 or above of total population
+	- `gdp.per.capita`: GDP per capita in US dollars
+* This dataset contains missing values in various fields
 
 ### Install and test drive
 
@@ -63,7 +64,7 @@ wbData %>%
 ## 4 North America        NA
 ## 5       Oceania   56.2180
 ## 6 South America   76.6095
-## 7            NA   31.1890
+## 7            NA        NA
 ```
 
 ```r
